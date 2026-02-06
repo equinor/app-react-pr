@@ -17,8 +17,7 @@ on:
       - opened
       - reopened
       - synchronize
-    branches:
-      - main     
+
 
 concurrency:
   group: demo-pr-${{ github.event.pull_request.id }}
