@@ -38,7 +38,7 @@ jobs:
         run: node ./.scripts/process-turbo-build-log.cjs > tsc-build.log
 
       - name: upload build log
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           path: tsc-build.log
 
