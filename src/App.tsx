@@ -95,17 +95,5 @@ export const App = () => (
       Start by exploring the available modules and customizing this component.
     </p>
 
-    <h3>Resources</h3>
-    <p>
-      <a
-        href="https://equinor.github.io/fusion-framework/modules/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Fusion Framework Modules
-      </a>
-    </p>
-
-
   </div>
 );
