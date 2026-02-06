@@ -52,7 +52,7 @@ jobs:
     strategy:
       matrix:
         app: ${{ fromJson(needs.app-resolver.outputs.changed-apps) }}
-    uses: ./.github/workflows/demo-build.yml
+    uses: ./.github/workflows/build.yml
     with:
       app-name: ${{ matrix.app.name }}
       work-dir: ${{ matrix.app.path }}

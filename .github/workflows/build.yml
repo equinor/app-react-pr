@@ -107,7 +107,7 @@ jobs:
     strategy:
       matrix:
         env: ${{ fromJson(inputs.env-matrix) }}
-    uses: ./.github/workflows/demo-publish.yml
+    uses: ./.github/workflows/publish.yml
     with:
       env: ${{ matrix.env }}
       app-name: ${{ inputs.app-name }}

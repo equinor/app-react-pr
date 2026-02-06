@@ -60,7 +60,7 @@ jobs:
       id-token: write
       issues: write
       pull-requests: write
-    uses: ./.github/workflows/demo-app-resolver.yml
+    uses: ./.github/workflows/app-resolver.yml
 
 
   lint-validation:
@@ -71,7 +71,7 @@ jobs:
       contents: read
       pull-requests: write
       checks: write
-    uses: ./.github/workflows/demo-lint-validation.yml
+    uses: ./.github/workflows/lint-validation.yml
 
   build-validation:
     name: 🔨 Build Validation
@@ -81,7 +81,7 @@ jobs:
       contents: read
       pull-requests: write
       checks: write
-    uses: ./.github/workflows/demo-build-validation.yml
+    uses: ./.github/workflows/build-validation.yml
 
   test-validation:
     name: 🧪 Test Validation
@@ -91,6 +91,6 @@ jobs:
       contents: read
       pull-requests: write
       checks: write
-    uses: ./.github/workflows/demo-test-validation.yml
+    uses: ./.github/workflows/test-validation.yml
     
 
