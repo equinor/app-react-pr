@@ -45,7 +45,7 @@ jobs:
         with:
           node-version: ${{ inputs.NODE_VERSION }}
 
-      - uses: reviewdog/action-setup@v1.4.0
+      - uses: reviewdog/action-setup@v1.5.0
 
       - name: Delete outdated ReviewDog comments
         uses: Ardiannn08/resolve-outdated-comment@v1.3
