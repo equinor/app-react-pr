@@ -84,16 +84,15 @@
  * @since 1.0.0
  */
 export const App = () => (
-  <div style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto' }}>
-    <h2>Welcome to Fusion Framework</h2>
-    <p>
-      This is a bare template for building applications with Fusion Framework.
-    </p>
+	<div style={{ padding: "2rem", maxWidth: "800px", margin: "0 auto" }}>
+		<h2>Welcome to Fusion Framework</h2>
+		<p>
+			This is a bare template for building applications with Fusion Framework.
+		</p>
 
-    <h3>Getting Started</h3>
-    <p>
-      Start by exploring the available modules and customizing this component.
-    </p>
-
-  </div>
+		<h3>Getting Started</h3>
+		<p>
+			Start by exploring the available modules and customizing this component.
+		</p>
+	</div>
 );
