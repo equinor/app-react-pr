@@ -73,16 +73,15 @@ jobs:
       checks: write
     uses: ./.github/workflows/lint-validation.yml
 
-  build-validation:
-    name: 🔨 Build Validation
+test-coverage:
+    name: 📋 Test Coverage
     needs: pr-detection
     if: needs.pr-detection.outputs.is-draft == 'true'
     permissions:
       contents: read
       pull-requests: write
       checks: write
-    uses: ./.github/workflows/build-validation.yml
-
+    uses: ./.github/workflows/test-coverage.yml
   test-validation:
     name: 🧪 Test Validation
     needs: pr-detection
