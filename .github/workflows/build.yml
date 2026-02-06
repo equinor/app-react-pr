@@ -17,8 +17,6 @@ on:
         type: string
         default: './'
 
-env:
-  NODE_VERSION: 24
 
 jobs:
   build-pack:
@@ -58,14 +56,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Setup pnpm package manager 
-        uses: pnpm/action-setup@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: 'pnpm'
+      # Install dependencies and setup Node.js environment
+      - name: 🤖 Setup node and install deps
+        uses: ./.github/workflows/actions/node-setup
 
       - name: Install dependencies
         shell: bash
