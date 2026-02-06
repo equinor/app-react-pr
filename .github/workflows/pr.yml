@@ -1,4 +1,4 @@
-name: 🤖 PR
+name: 🛠️ PR
 
 # The permissions the workflow needs to run
 # - id-token: Required for OpenID Connect authentication with Azure

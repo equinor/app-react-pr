@@ -1,4 +1,4 @@
-name: Publish Fusion Application
+name: 🚀 Publish Application
 
 on:
   workflow_call:

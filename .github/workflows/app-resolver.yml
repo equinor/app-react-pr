@@ -1,7 +1,7 @@
 # This workflow determins what apps are affected by change. 
 # Its output is application name and working directory which is used by build and publish workflows.
 
-name:  🛠️ App Resolver  
+name:  🔦 App Resolver  
 
 on:
   workflow_call:
