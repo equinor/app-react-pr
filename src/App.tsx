@@ -106,12 +106,6 @@ export const App = () => (
       </a>
     </p>
 
-    <h3>Next Steps</h3>
-    <ul>
-      <li>Update this component with your app's content</li>
-      <li>Configure your app in the Fusion Portal</li>
-      <li>Set up authentication and routing</li>
-      <li>Deploy your application</li>
-    </ul>
+
   </div>
 );
