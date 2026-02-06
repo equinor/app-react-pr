@@ -1,0 +1,49 @@
+name: 🧪 Build Validation
+
+permissions:
+  contents: read
+  pull-requests: write
+  checks: write
+
+on:
+  workflow_call:
+    inputs:
+      NODE_VERSION:
+        required: false
+        type: string
+        default: '22'
+        
+jobs:
+  build:
+    name: 🛠️ Build Validation
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Setup node and install deps
+        uses: ./.github/workflows/actions/node-setup
+        with:
+          node-version: ${{ inputs.NODE_VERSION }}
+
+      - name: Build affected packages
+        id: build
+        continue-on-error: true
+        uses: ./.github/workflows/actions/build-packages
+        with:
+          only-affected: false
+
+      - name: process-build-log
+        run: node ./.scripts/process-turbo-build-log.cjs > tsc-build.log
+
+      - name: upload build log
+        uses: actions/upload-artifact@v4
+        with:
+          path: tsc-build.log
+
+      - name: Check if build failed
+        if: steps.build.outcome == 'failure'
+        run: exit 1
+
+
