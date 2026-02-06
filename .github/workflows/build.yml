@@ -29,18 +29,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Setup pnpm package manager 
-        uses: pnpm/action-setup@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: 'pnpm'
-
-      - name: Install dependencies
-        shell: bash
-        run: pnpm install --frozen-lockfile
+      # Install dependencies and setup Node.js environment
+      - name: 🤖 Setup node and install deps
+        uses: ./.github/workflows/actions/node-setup
 
       # Pack the application with snapshot flag for PR deployments this ensures unique versioning
       # Using pr suffix is optional but helps in identifying PR deployments
