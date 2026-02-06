@@ -9,7 +9,6 @@ permissions:
   contents: read
   pull-requests: write
 
-
 on:
   pull_request:
     types:
@@ -18,9 +17,8 @@ on:
       - reopened
       - synchronize
 
-
 concurrency:
-  group: demo-pr-${{ github.event.pull_request.id }}
+  group: pr-${{ github.event.pull_request.id }}
   cancel-in-progress: true
 
 jobs:
