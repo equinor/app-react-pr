@@ -1,5 +1,4 @@
-name: PR
-
+name: 🤖 PR
 
 # The permissions the workflow needs to run
 # - id-token: Required for OpenID Connect authentication with Azure
@@ -19,9 +18,7 @@ on:
       - reopened
       - synchronize
     branches:
-      - feat/test-publish-action
-    paths:
-      - "*" # Remove
+      - main     
 
 concurrency:
   group: demo-pr-${{ github.event.pull_request.id }}

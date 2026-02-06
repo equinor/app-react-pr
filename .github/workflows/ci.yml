@@ -8,7 +8,7 @@ permissions:
 on:
   push:
     branches:
-      - feat/test-publish-action
+      - main 
 
 concurrency:
   group: demo-pr-${{ github.event.pull_request.id }}
