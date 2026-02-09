@@ -92,7 +92,7 @@ export const App = () => (
 
 		<h3>Getting Started</h3>
 		<p>
-Wooohoooo
+Wooohoooo!
 		</p>
 	</div>
 );
