@@ -2,7 +2,7 @@ name: 📋 Test Coverage
 
 on:
   workflow_run:
-    workflows: ["test-validation"]           # exact name of Workflow A
+    workflows: ["Test","test-validation"]           # exact name of Workflow A
     types:
       - completed
   workflow_call:
