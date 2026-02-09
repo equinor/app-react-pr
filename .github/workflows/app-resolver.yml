@@ -56,5 +56,5 @@ jobs:
     with:
       app-name: ${{ matrix.app.name }}
       work-dir: ${{ matrix.app.path }}
-      env-matrix: '["pr"]'
+      environment: '["pr"]'
     
