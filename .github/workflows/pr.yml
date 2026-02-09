@@ -75,6 +75,7 @@ jobs:
       pull-requests: write
       checks: write
     uses: ./.github/workflows/lint-validation.yml
+ 
   test-validation:
     name: 🧪 Test Validation
     needs: pr-detection

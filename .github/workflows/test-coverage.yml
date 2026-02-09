@@ -2,7 +2,7 @@ name: 📋 Test Coverage
 
 on:
   workflow_run:
-    workflows: ["🤖 Test"]           # exact name of Workflow A
+    workflows: ["🤖 Test", "🧪 Test Validation"]           # exact name of Workflow A
     types:
       - completed
     branches: [main]
