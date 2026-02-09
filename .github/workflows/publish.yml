@@ -62,5 +62,5 @@ jobs:
             echo "View application [here](https://fusion.ci.fusion-dev.net/apps/${{ inputs.app-name }}?$tag=pr-${{ github.event.number }})" >> $GITHUB_STEP_SUMMARY
           else
             echo "## 🚀 Application Released" >> $GITHUB_STEP_SUMMARY
-            echo "The application has been published to the ${inputs.env} environment." >> $GITHUB_STEP_SUMMARY
+            echo "The application has been published to the ${{ inputs.env }} environment." >> $GITHUB_STEP_SUMMARY
           fi
