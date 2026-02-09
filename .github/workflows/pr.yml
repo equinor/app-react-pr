@@ -16,7 +16,6 @@ on:
       - opened
       - reopened
       - synchronize
-  workflow_dispatch:
 
 concurrency:
   group: pr-${{ github.event.pull_request.id }}
@@ -26,7 +25,7 @@ jobs:
   pr-detection:
     name: 🕵️‍♂️ PR Draft Detection 
     runs-on: ubuntu-latest
-    if: github.actor != 'dependabot[bot]' || github.event_name == 'workflow_dispatch'
+    if: github.actor != 'dependabot[bot]' 
     permissions:
       contents: read
       pull-requests: read
