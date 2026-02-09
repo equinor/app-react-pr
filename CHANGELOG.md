@@ -1,5 +1,11 @@
 # app-react-pr
 
+## 0.0.8
+
+### Patch Changes
+
+- 7e33000: test
+
 ## 0.0.7
 
 ### Patch Changes

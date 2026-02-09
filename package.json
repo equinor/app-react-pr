@@ -1,6 +1,6 @@
 {
 	"name": "app-react-pr",
-	"version": "0.0.7",
+	"version": "0.0.8",
 	"description": "Bare template for building React applications with Fusion Framework. A minimal starting point for developers to create custom applications from scratch.",
 	"main": "dist/index.js",
 	"type": "module",
