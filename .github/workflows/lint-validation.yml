@@ -58,5 +58,4 @@ jobs:
         with:
           github_token: ${{ github.token }}
           reporter: ${{ steps.reporter.outputs.value }}
-          fail_level: error
 
