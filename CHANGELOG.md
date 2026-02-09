@@ -1,5 +1,12 @@
 # app-react-pr
 
+## 0.0.12
+
+### Patch Changes
+
+- fb1078b: dsfgs
+- 3751076: test22222
+
 ## 0.0.11
 
 ### Patch Changes

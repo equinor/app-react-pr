@@ -91,8 +91,6 @@ export const App = () => (
 		</p>
 
 		<h3>Getting Started</h3>
-		<p>
-Wooohoooo!2000
-		</p>
+		<p>Wooohoooo!2000</p>
 	</div>
 );
