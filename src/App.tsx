@@ -92,8 +92,7 @@ export const App = () => (
 
 		<h3>Getting Started</h3>
 		<p>
-			Start by exploring the available modules and customizing this component.
-			2000
+Wooohoooo
 		</p>
 	</div>
 );
