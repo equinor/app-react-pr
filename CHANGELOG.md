@@ -1,5 +1,11 @@
 # app-react-pr
 
+## 0.0.5
+
+### Patch Changes
+
+- 3b11878: test
+
 ## 0.0.4
 
 ### Patch Changes
