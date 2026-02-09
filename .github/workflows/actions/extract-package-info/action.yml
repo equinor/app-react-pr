@@ -1,3 +1,40 @@
+# Extract Package Info Action
+# 
+# Extracts package information (name, version, path) from git tags and package.json files.
+# Supports both monorepo and single-package project structures with automatic detection.
+#
+# Features:
+# - Automatic project structure detection (monorepo vs single-package)
+# - Version extraction from git tags (removes refs/tags/v prefix)
+# - Package name extraction from package.json
+# - Working directory determination for build processes
+# - Support for Fusion app detection
+#
+# Supported Project Structures:
+# 1. Monorepo: packages in apps/<package-name>/ directory
+# 2. Single package: package.json in root directory
+#
+# Example usage in workflow:
+#
+# steps:
+#   - name: Extract package info
+#     id: package-info
+#     uses: ./.github/workflows/actions/extract-package-info
+#     with:
+#       tag-ref: ${{ github.ref }}        # Optional, defaults to github.ref
+#       package-name: my-app              # Required for monorepo
+#
+#   - name: Build in correct directory
+#     working-directory: ${{ steps.package-info.outputs.working-directory }}
+#     run: npm run build
+#
+# Outputs:
+# - app-name: Package name from package.json
+# - app-version: Version extracted from git tag (v1.2.3 → 1.2.3)
+# - app-path: Path to directory containing package.json
+# - working-directory: Working directory for package operations
+# - project-structure: "monorepo" or "single-package"
+#
 name: 'Extract Package Info'
 description: 'Extracts package name, version, and path from git tag reference'
 inputs:
