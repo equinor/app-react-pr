@@ -16,6 +16,12 @@ on:
       - opened
       - reopened
       - synchronize
+  workflow_dispatch:
+    inputs:
+      force-run:
+        description: 'Force run the workflow usefor re-running on dependabot PRs'
+        required: false
+        default: 'false'
 
 concurrency:
   group: pr-${{ github.event.pull_request.id }}
@@ -25,7 +31,7 @@ jobs:
   pr-detection:
     name: 🕵️‍♂️ PR Draft Detection 
     runs-on: ubuntu-latest
-    if: github.actor != 'dependabot[bot]' 
+    if: github.actor != 'dependabot[bot]' || (github.actor == 'dependabot[bot]' && github.event.inputs.force-run == 'true') 
     permissions:
       contents: read
       pull-requests: read
