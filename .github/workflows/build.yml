@@ -1,3 +1,44 @@
+# 🛠️ Build Application Workflow
+#
+# This reusable workflow handles building, configuring, and publishing Fusion applications.
+# It's designed to be called by other workflows (CI, PR, release) to ensure consistent 
+# build and deployment processes across different environments.
+#
+# Key Features:
+# - Reusable workflow: Can be called by other workflows with different parameters
+# - Environment-aware: Supports multiple environments (ci, pr, production)
+# - Artifact generation: Creates deployable app bundles and configuration files
+# - Release management: Different packaging for PR vs release deployments
+# - Fusion CLI integration: Uses @equinor/fusion-framework-cli for building and config
+#
+# Workflow Structure:
+# 1. build-pack: Packages the application into a distributable bundle
+#    - For PRs: Creates snapshot version with timestamp and "pr" suffix
+#    - For releases: Uses version from package.json
+# 2. config: Generates environment-specific configuration files
+#    - Looks for app.config.[env].ts files for environment-specific settings
+#    - Falls back to app.config.ts if environment-specific config doesn't exist
+#    - Outputs JSON configuration files as artifacts
+# 3. publish: Calls the publish workflow to deploy the built application
+#
+# Inputs:
+# - environment: Target environments as JSON array (default: ["ci"])
+# - app-name: Name of the application being built (default: "unknown")
+# - work-dir: Working directory for the build (default: "./")
+# - release: Whether this is a release build (affects versioning)
+#
+# Usage Examples:
+# ```yaml
+# jobs:
+#   build-app:
+#     uses: ./.github/workflows/build.yml
+#     with:
+#       app-name: "my-fusion-app"
+#       work-dir: "./apps/my-app"
+#       environment: '["ci", "pr"]'
+#       release: false
+# ```
+#
 name: 🛠️ Build Application
 
 
@@ -55,7 +96,7 @@ jobs:
       - name: Upload packed app as artifact
         uses: actions/upload-artifact@v6
         with:
-          name: dist
+          name: app-bundle
           path: ${{ inputs.work-dir }}/app-bundle.zip
 
   config: 
@@ -63,7 +104,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        env: ${{ fromJson(inputs.env-matrix) }}
+        env: ${{ fromJson(inputs.environment) }}
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -89,7 +130,7 @@ jobs:
       - name: Upload config as artifact
         uses: actions/upload-artifact@v6
         with: 
-          name: config
+          name: app-config
           path: ${{ inputs.work-dir }}/app-config.${{ matrix.env }}.json
 
   publish:
@@ -102,7 +143,7 @@ jobs:
       pull-requests: write
     strategy:
       matrix:
-        env: ${{ fromJson(inputs.env-matrix) }}
+        env: ${{ fromJson(inputs.environment) }}
     uses: ./.github/workflows/publish.yml
     with:
       env: ${{ matrix.env }}
