@@ -25,6 +25,7 @@ jobs:
   pr-detection:
     name: 🕵️‍♂️ PR Draft Detection 
     runs-on: ubuntu-latest
+    if: github.actor != 'dependabot[bot]' 
     permissions:
       contents: read
       pull-requests: read
@@ -50,6 +51,7 @@ jobs:
             echo "## ✅ Ready for Review" >> $GITHUB_STEP_SUMMARY
             echo "This PR is ready for review. Running full PR pipeline." >> $GITHUB_STEP_SUMMARY
           fi
+          
 
   build:
     name: 🛠️ App Resolver Workflow
