@@ -77,7 +77,7 @@ jobs:
     uses: ./.github/workflows/lint-validation.yml
  
   test-validation:
-    name: 🧪 Test Validation
+    name: Test Validation
     needs: pr-detection
     if: needs.pr-detection.outputs.is-draft == 'true'
     permissions:
