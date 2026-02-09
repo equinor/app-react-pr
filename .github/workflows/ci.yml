@@ -32,8 +32,8 @@ jobs:
       # Install dependencies and setup Node.js environment
       - name: 🤖 Setup node and install deps
         uses: ./.github/workflows/actions/node-setup
-      # Process changesets: create version PR or GitHub releases
-      # This step requires write permissions to create releases
+      # Process changesets: create version PR or publish packages to npm
+      # This step requires write permissions to create releases and publish packages
       - name: 🤖 Create Release Pull Request Fusion App Application
         id: changesets
         uses: changesets/action@v1
@@ -42,8 +42,9 @@ jobs:
           createGithubReleases: true
           setupGitUser: false
           version: pnpm changeset:version
+          publish: pnpm changeset:publish
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
 
       # Convert changeset PR to draft to prevent accidental merging
       - name: 🤖 Convert Changeset PR to draft
