@@ -16,6 +16,10 @@ on:
         required: false
         type: string
         default: './'
+      release:
+        required: false
+        type: boolean
+        default: false
 
 
 jobs:
@@ -33,12 +37,20 @@ jobs:
 
       # Pack the application with snapshot flag for PR deployments this ensures unique versioning
       # Using pr suffix is optional but helps in identifying PR deployments
-      - name: Pack application
+      - name: Pack application PR deployment
         # This step packages the application into a distributable bundle (app-bundle.zip)
         # The --snapshot flag creates a pre-release version with a timestamp
         # The pr suffix helps identify this as a pull request deployment
+        if: ${{ inputs.release == false }}
         working-directory: ${{ inputs.work-dir }}
         run: npx -y -p @equinor/fusion-framework-cli@latest ffc app pack --snapshot pr
+
+      # Pack the application for release if the release flag is true this will use the version from package.json
+      - name: Pack application release deployment
+        # This step packages the application into a distributable bundle (app-bundle.zip)
+        if: ${{ inputs.release == true }}
+        working-directory: ${{ inputs.work-dir }}
+        run: npx -y -p @equinor/fusion-framework-cli@latest ffc app pack
 
       - name: Upload packed app as artifact
         uses: actions/upload-artifact@v6
@@ -95,3 +107,4 @@ jobs:
     with:
       env: ${{ matrix.env }}
       app-name: ${{ inputs.app-name }}
+      release: ${{ inputs.release }}
