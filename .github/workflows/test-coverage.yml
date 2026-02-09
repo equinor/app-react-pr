@@ -2,8 +2,10 @@ name: 📋 Test Coverage
 
 on:
   workflow_call:
+    workflow: ["🤖 Test"]
+    types: 
+      - completed
     inputs:
-
       NODE_VERSION:
         required: false
         type: string
