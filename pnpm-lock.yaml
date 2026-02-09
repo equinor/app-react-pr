@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@equinor/fusion-framework-cli':
-        specifier: ^13.3.3
-        version: 13.3.3(@equinor/fusion-framework-module-event@5.0.0)(@equinor/fusion-observable@8.5.7(@types/react@18.3.28)(react@18.3.1))(@types/node@25.2.1)(@types/react@18.3.28)(chalk@5.6.2)(react@18.3.1)(rxjs@7.8.2)(typescript@5.9.3)
+        specifier: ^13.3.4
+        version: 13.3.4(2lyvv2rhm23ip2ofvbxqo6x5vu)
       '@equinor/fusion-framework-react-app':
         specifier: ^9.0.0
         version: 9.0.0(@equinor/fusion-framework-module-event@5.0.0)(@equinor/fusion-framework-module-http@7.0.7(@equinor/fusion-framework-module-telemetry@4.6.3(@equinor/fusion-framework-module-event@5.0.0)(@equinor/fusion-framework-module@5.0.5)(@equinor/fusion-observable@8.5.7(@types/react@18.3.28)(react@18.3.1)))(semver@7.7.4)(typescript@5.9.3))(@equinor/fusion-framework-module-msal@7.0.0(@equinor/fusion-framework-module-telemetry@4.6.3(@equinor/fusion-framework-module-event@5.0.0)(@equinor/fusion-framework-module@5.0.5)(@equinor/fusion-observable@8.5.7(@types/react@18.3.28)(react@18.3.1)))(@equinor/fusion-framework-module@5.0.5)(semver@7.7.4)(typescript@5.9.3)(zod@4.3.6))(@equinor/fusion-observable@8.5.7(@types/react@18.3.28)(react@18.3.1))(@remix-run/router@1.23.2)(@types/react@18.3.28)(chalk@5.6.2)(odata-query@8.0.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rxjs@7.8.2)(semver@7.7.4)(typescript@5.9.3)(zod@4.3.6)
@@ -29,7 +29,7 @@ importers:
         version: 0.5.2
       '@changesets/cli':
         specifier: ^2.29.7
-        version: 2.29.8(@types/node@25.2.1)
+        version: 2.29.8(@types/node@25.2.2)
       '@types/react':
         specifier: ^18.3.12
         version: 18.3.28
@@ -270,8 +270,8 @@ packages:
       '@equinor/fusion-framework-module-bookmark':
         optional: true
 
-  '@equinor/fusion-framework-cli@13.3.3':
-    resolution: {integrity: sha512-7TMPH3rF57/pLvW3ka2qusbMnj0QS50Ncy5s8WS0QeSDAITGA4ImSpu+jc/4QQSJuLUFS+Nwmf09WqUEcU6QTw==}
+  '@equinor/fusion-framework-cli@13.3.4':
+    resolution: {integrity: sha512-+ZUwLKw36OiM4wii8EjKd49gWNgGIgWzNit/pf/FBnAhTX5diSbee7Qx/+zDsHZWjh5Avn9NrhCFWCs/izBfug==}
     engines: {node: '>=20.0.0'}
     hasBin: true
     peerDependencies:
@@ -280,8 +280,64 @@ packages:
       typescript:
         optional: true
 
-  '@equinor/fusion-framework-dev-portal@1.4.0':
-    resolution: {integrity: sha512-vmwndM7pXe/UHDarVbBiDZWs36GYDxCbyjgDlLxKvc2iZBcFSXlH3WUhyjD3zUBrJ4lExXTPAnw1fBIE59e/JA==}
+  '@equinor/fusion-framework-dev-portal@1.4.1':
+    resolution: {integrity: sha512-vnUkQDd/z/okVzkLJ87Lyl+4K005XVXowBngF4bfJOrk+9UAb3FQUkQBdp53M1MdTE8usKeO8rkK4ADbHrKtkA==}
+    peerDependencies:
+      '@equinor/fusion-framework': 7.4.6
+      '@equinor/fusion-framework-app': 10.4.2
+      '@equinor/fusion-framework-dev-server': 1.1.25
+      '@equinor/fusion-framework-module-ag-grid': 34.4.0
+      '@equinor/fusion-framework-module-analytics': 0.2.3
+      '@equinor/fusion-framework-module-app': 7.4.0
+      '@equinor/fusion-framework-module-bookmark': 3.0.5
+      '@equinor/fusion-framework-module-context': 7.0.2
+      '@equinor/fusion-framework-module-feature-flag': 1.1.27
+      '@equinor/fusion-framework-module-navigation': 6.0.0
+      '@equinor/fusion-framework-module-services': 7.1.7
+      '@equinor/fusion-framework-module-telemetry': 4.6.3
+      '@equinor/fusion-framework-react': 7.4.19
+      '@equinor/fusion-framework-react-components-bookmark': 1.1.2
+      '@equinor/fusion-framework-react-components-people-provider': 1.5.25
+      '@equinor/fusion-framework-react-module-bookmark': 5.0.1
+      '@equinor/fusion-observable': 8.5.7
+      '@equinor/fusion-query': 6.0.3
+    peerDependenciesMeta:
+      '@equinor/fusion-framework':
+        optional: true
+      '@equinor/fusion-framework-app':
+        optional: true
+      '@equinor/fusion-framework-dev-server':
+        optional: true
+      '@equinor/fusion-framework-module-ag-grid':
+        optional: true
+      '@equinor/fusion-framework-module-analytics':
+        optional: true
+      '@equinor/fusion-framework-module-app':
+        optional: true
+      '@equinor/fusion-framework-module-bookmark':
+        optional: true
+      '@equinor/fusion-framework-module-context':
+        optional: true
+      '@equinor/fusion-framework-module-feature-flag':
+        optional: true
+      '@equinor/fusion-framework-module-navigation':
+        optional: true
+      '@equinor/fusion-framework-module-services':
+        optional: true
+      '@equinor/fusion-framework-module-telemetry':
+        optional: true
+      '@equinor/fusion-framework-react':
+        optional: true
+      '@equinor/fusion-framework-react-components-bookmark':
+        optional: true
+      '@equinor/fusion-framework-react-components-people-provider':
+        optional: true
+      '@equinor/fusion-framework-react-module-bookmark':
+        optional: true
+      '@equinor/fusion-observable':
+        optional: true
+      '@equinor/fusion-query':
+        optional: true
 
   '@equinor/fusion-framework-dev-server@1.1.25':
     resolution: {integrity: sha512-mNCAfgyoQ3l398GMS5RonQe2HrgOv1GR1ASYyYyWkGe6OuXZ+wnS851yK9ivPlLEKKR6/syotVSxZWLf41HTfQ==}
@@ -979,8 +1035,8 @@ packages:
   '@types/node@12.20.55':
     resolution: {integrity: sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ==}
 
-  '@types/node@25.2.1':
-    resolution: {integrity: sha512-CPrnr8voK8vC6eEtyRzvMpgp3VyVRhgclonE7qYi6P9sXwYb59ucfrnmFBTaP0yUi8Gk4yZg/LlTJULGxvTNsg==}
+  '@types/node@25.2.2':
+    resolution: {integrity: sha512-BkmoP5/FhRYek5izySdkOneRyXYN35I860MFAGupTdebyE66uZaR+bXLHq8k4DirE5DwQi3NuhvRU1jqTVwUrQ==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -1719,8 +1775,8 @@ packages:
     resolution: {integrity: sha512-Q5hMVBYur/eQNWDdbF4/Wqqr9Bjvtrw2kjGxxBbKLbx8bVCL8gcArjTy8zDUuLGQicftpMuU0riQNcAsbtOVsw==}
     engines: {node: '>=20'}
 
-  read-pkg@10.0.0:
-    resolution: {integrity: sha512-A70UlgfNdKI5NSvTTfHzLQj7NJRpJ4mT5tGafkllJ4wh71oYuGm/pzphHcmW4s35iox56KSK721AihodoXSc/A==}
+  read-pkg@10.1.0:
+    resolution: {integrity: sha512-I8g2lArQiP78ll51UeMZojewtYgIRCKCWqZEgOO8c/uefTI+XDXvCSXu3+YNUaTNvZzobrL5+SqHjBrByRRTdg==}
     engines: {node: '>=20'}
 
   read-yaml-file@1.1.0:
@@ -1911,8 +1967,8 @@ packages:
     resolution: {integrity: sha512-TeTSQ6H5YHvpqVwBRcnLDCBnDOHWYu7IvGbHT6N8AOymcr9PJGjc1GTtiWZTYg0NCgYwvnYWEkVChQAr9bjfwA==}
     engines: {node: '>=16'}
 
-  type-fest@5.4.3:
-    resolution: {integrity: sha512-AXSAQJu79WGc79/3e9/CR77I/KQgeY1AhNvcShIH4PTcGYyC4xv6H4R4AUOwkPS5799KlVDAu8zExeCrkGquiA==}
+  type-fest@5.4.4:
+    resolution: {integrity: sha512-JnTrzGu+zPV3aXIUhnyWJj4z/wigMsdYajGLIYakqyOW1nPllzXEJee0QQbHj+CTIQtXGlAjuK0UY+2xTyjVAw==}
     engines: {node: '>=20'}
 
   typescript@5.9.3:
@@ -1926,6 +1982,10 @@ packages:
   unicorn-magic@0.3.0:
     resolution: {integrity: sha512-+QBBXBCvifc56fsbuxZQ6Sic3wqqc3WWaqxs58gvJrcOuN83HGTCwz3oS5phzU9LthRNE9VrJCFCLUgHeeFnfA==}
     engines: {node: '>=18'}
+
+  unicorn-magic@0.4.0:
+    resolution: {integrity: sha512-wH590V9VNgYH9g3lH9wWjTrUoKsjLF6sGLjhR4sH1LWpLmCOH0Zf7PukhDA8BiS7KHe4oPNkcTHqYkj7SOGUOw==}
+    engines: {node: '>=20'}
 
   universalify@0.1.2:
     resolution: {integrity: sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==}
@@ -1951,8 +2011,8 @@ packages:
   validate-npm-package-license@3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==}
 
-  vite-tsconfig-paths@6.0.5:
-    resolution: {integrity: sha512-f/WvY6ekHykUF1rWJUAbCU7iS/5QYDIugwpqJA+ttwKbxSbzNlqlE8vZSrsnxNQciUW+z6lvhlXMaEyZn9MSig==}
+  vite-tsconfig-paths@6.1.0:
+    resolution: {integrity: sha512-kpd3sY9glHIDaq4V/Tlc1Y8WaKtutoc3B525GHxEVKWX42FKfQsXvjFOemu1I8VIN8pNbrMLWVTbW79JaRUxKg==}
     peerDependencies:
       vite: '*'
 
@@ -2240,7 +2300,7 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  '@changesets/cli@2.29.8(@types/node@25.2.1)':
+  '@changesets/cli@2.29.8(@types/node@25.2.2)':
     dependencies:
       '@changesets/apply-release-plan': 7.0.14
       '@changesets/assemble-release-plan': 6.0.9
@@ -2256,7 +2316,7 @@ snapshots:
       '@changesets/should-skip-package': 0.1.2
       '@changesets/types': 6.1.0
       '@changesets/write': 0.4.0
-      '@inquirer/external-editor': 1.0.3(@types/node@25.2.1)
+      '@inquirer/external-editor': 1.0.3(@types/node@25.2.2)
       '@manypkg/get-packages': 1.1.3
       ansi-colors: 4.1.3
       ci-info: 3.9.0
@@ -2384,10 +2444,10 @@ snapshots:
       - typescript
       - zod
 
-  '@equinor/fusion-framework-cli@13.3.3(@equinor/fusion-framework-module-event@5.0.0)(@equinor/fusion-observable@8.5.7(@types/react@18.3.28)(react@18.3.1))(@types/node@25.2.1)(@types/react@18.3.28)(chalk@5.6.2)(react@18.3.1)(rxjs@7.8.2)(typescript@5.9.3)':
+  '@equinor/fusion-framework-cli@13.3.4(2lyvv2rhm23ip2ofvbxqo6x5vu)':
     dependencies:
-      '@equinor/fusion-framework-dev-portal': 1.4.0
-      '@equinor/fusion-framework-dev-server': 1.1.25(@equinor/fusion-framework-module-event@5.0.0)(@equinor/fusion-observable@8.5.7(@types/react@18.3.28)(react@18.3.1))(@types/react@18.3.28)(chalk@5.6.2)(react@18.3.1)(rxjs@7.8.2)(semver@7.7.4)(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.1))(zod@4.3.6)
+      '@equinor/fusion-framework-dev-portal': 1.4.1(teagacc7ne77ofh4kbxopk2eda)
+      '@equinor/fusion-framework-dev-server': 1.1.25(@equinor/fusion-framework-module-event@5.0.0)(@equinor/fusion-observable@8.5.7(@types/react@18.3.28)(react@18.3.1))(@types/react@18.3.28)(chalk@5.6.2)(react@18.3.1)(rxjs@7.8.2)(semver@7.7.4)(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.2))(zod@4.3.6)
       '@equinor/fusion-framework-module-msal-node': 3.0.0
       '@equinor/fusion-imports': 1.1.10
       '@types/inquirer': 9.0.9
@@ -2396,21 +2456,37 @@ snapshots:
       dotenv: 17.2.4
       execa: 9.6.1
       find-up: 8.0.0
-      inquirer: 13.2.2(@types/node@25.2.1)
+      inquirer: 13.2.2(@types/node@25.2.2)
       is-mergeable-object: 1.1.1
       is-path-inside: 4.0.0
       ora: 9.3.0
       read-package-up: 12.0.0
       semver: 7.7.4
       simple-git: 3.30.0
-      vite: 7.3.1(@types/node@25.2.1)
-      vite-tsconfig-paths: 6.0.5(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.1))
+      vite: 7.3.1(@types/node@25.2.2)
+      vite-tsconfig-paths: 6.1.0(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.2))
       zod: 4.3.6
     optionalDependencies:
       typescript: 5.9.3
     transitivePeerDependencies:
+      - '@equinor/fusion-framework'
+      - '@equinor/fusion-framework-app'
+      - '@equinor/fusion-framework-module-ag-grid'
+      - '@equinor/fusion-framework-module-analytics'
+      - '@equinor/fusion-framework-module-app'
+      - '@equinor/fusion-framework-module-bookmark'
+      - '@equinor/fusion-framework-module-context'
       - '@equinor/fusion-framework-module-event'
+      - '@equinor/fusion-framework-module-feature-flag'
+      - '@equinor/fusion-framework-module-navigation'
+      - '@equinor/fusion-framework-module-services'
+      - '@equinor/fusion-framework-module-telemetry'
+      - '@equinor/fusion-framework-react'
+      - '@equinor/fusion-framework-react-components-bookmark'
+      - '@equinor/fusion-framework-react-components-people-provider'
+      - '@equinor/fusion-framework-react-module-bookmark'
       - '@equinor/fusion-observable'
+      - '@equinor/fusion-query'
       - '@microsoft/applicationinsights-web'
       - '@types/node'
       - '@types/react'
@@ -2431,15 +2507,26 @@ snapshots:
       - tsx
       - yaml
 
-  '@equinor/fusion-framework-dev-portal@1.4.0': {}
+  '@equinor/fusion-framework-dev-portal@1.4.1(teagacc7ne77ofh4kbxopk2eda)':
+    optionalDependencies:
+      '@equinor/fusion-framework': 7.4.6(@equinor/fusion-observable@8.5.7(@types/react@18.3.28)(react@18.3.1))(@types/react@18.3.28)(chalk@5.6.2)(odata-query@8.0.7)(react@18.3.1)(semver@7.7.4)(typescript@5.9.3)(zod@4.3.6)
+      '@equinor/fusion-framework-dev-server': 1.1.25(@equinor/fusion-framework-module-event@5.0.0)(@equinor/fusion-observable@8.5.7(@types/react@18.3.28)(react@18.3.1))(@types/react@18.3.28)(chalk@5.6.2)(react@18.3.1)(rxjs@7.8.2)(semver@7.7.4)(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.2))(zod@4.3.6)
+      '@equinor/fusion-framework-module-app': 7.4.0(@types/react@18.3.28)(chalk@5.6.2)(react@18.3.1)
+      '@equinor/fusion-framework-module-context': 7.0.2(@equinor/fusion-framework-module@5.0.5)(@types/react@18.3.28)(chalk@5.6.2)(react@18.3.1)(rxjs@7.8.2)
+      '@equinor/fusion-framework-module-navigation': 6.0.0(@equinor/fusion-framework-module@5.0.5)(@remix-run/router@1.23.2)(rxjs@7.8.2)
+      '@equinor/fusion-framework-module-services': 7.1.7(@equinor/fusion-framework-module@5.0.5)(odata-query@8.0.7)
+      '@equinor/fusion-framework-module-telemetry': 4.6.3(@equinor/fusion-framework-module-event@5.0.0)(@equinor/fusion-framework-module@5.0.5)(@equinor/fusion-observable@8.5.7(@types/react@18.3.28)(react@18.3.1))
+      '@equinor/fusion-framework-react': 7.4.19(@equinor/fusion-framework-module-event@5.0.0)(@equinor/fusion-framework-module-http@7.0.7(@equinor/fusion-framework-module-telemetry@4.6.3(@equinor/fusion-framework-module-event@5.0.0)(@equinor/fusion-framework-module@5.0.5)(@equinor/fusion-observable@8.5.7(@types/react@18.3.28)(react@18.3.1)))(semver@7.7.4)(typescript@5.9.3))(@types/react@18.3.28)(chalk@5.6.2)(odata-query@8.0.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(semver@7.7.4)(typescript@5.9.3)(zod@4.3.6)
+      '@equinor/fusion-observable': 8.5.7(@types/react@18.3.28)(react@18.3.1)
+      '@equinor/fusion-query': 6.0.3(@types/react@18.3.28)(chalk@5.6.2)(react@18.3.1)
 
-  '@equinor/fusion-framework-dev-server@1.1.25(@equinor/fusion-framework-module-event@5.0.0)(@equinor/fusion-observable@8.5.7(@types/react@18.3.28)(react@18.3.1))(@types/react@18.3.28)(chalk@5.6.2)(react@18.3.1)(rxjs@7.8.2)(semver@7.7.4)(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.1))(zod@4.3.6)':
+  '@equinor/fusion-framework-dev-server@1.1.25(@equinor/fusion-framework-module-event@5.0.0)(@equinor/fusion-observable@8.5.7(@types/react@18.3.28)(react@18.3.1))(@types/react@18.3.28)(chalk@5.6.2)(react@18.3.1)(rxjs@7.8.2)(semver@7.7.4)(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.2))(zod@4.3.6)':
     dependencies:
       '@equinor/fusion-framework-vite-plugin-api-service': 1.2.4
       '@equinor/fusion-framework-vite-plugin-spa': 3.1.5(@equinor/fusion-framework-module-event@5.0.0)(@equinor/fusion-observable@8.5.7(@types/react@18.3.28)(react@18.3.1))(@types/react@18.3.28)(chalk@5.6.2)(react@18.3.1)(semver@7.7.4)(typescript@5.9.3)(zod@4.3.6)
       '@equinor/fusion-log': 1.1.7(chalk@5.6.2)(rxjs@7.8.2)
-      '@vitejs/plugin-react': 5.1.3(vite@7.3.1(@types/node@25.2.1))
-      vite: 7.3.1(@types/node@25.2.1)
+      '@vitejs/plugin-react': 5.1.3(vite@7.3.1(@types/node@25.2.2))
+      vite: 7.3.1(@types/node@25.2.2)
     transitivePeerDependencies:
       - '@equinor/fusion-framework-module-event'
       - '@equinor/fusion-observable'
@@ -2795,129 +2882,129 @@ snapshots:
 
   '@inquirer/ansi@2.0.3': {}
 
-  '@inquirer/checkbox@5.0.4(@types/node@25.2.1)':
+  '@inquirer/checkbox@5.0.4(@types/node@25.2.2)':
     dependencies:
       '@inquirer/ansi': 2.0.3
-      '@inquirer/core': 11.1.1(@types/node@25.2.1)
+      '@inquirer/core': 11.1.1(@types/node@25.2.2)
       '@inquirer/figures': 2.0.3
-      '@inquirer/type': 4.0.3(@types/node@25.2.1)
+      '@inquirer/type': 4.0.3(@types/node@25.2.2)
     optionalDependencies:
-      '@types/node': 25.2.1
+      '@types/node': 25.2.2
 
-  '@inquirer/confirm@6.0.4(@types/node@25.2.1)':
+  '@inquirer/confirm@6.0.4(@types/node@25.2.2)':
     dependencies:
-      '@inquirer/core': 11.1.1(@types/node@25.2.1)
-      '@inquirer/type': 4.0.3(@types/node@25.2.1)
+      '@inquirer/core': 11.1.1(@types/node@25.2.2)
+      '@inquirer/type': 4.0.3(@types/node@25.2.2)
     optionalDependencies:
-      '@types/node': 25.2.1
+      '@types/node': 25.2.2
 
-  '@inquirer/core@11.1.1(@types/node@25.2.1)':
+  '@inquirer/core@11.1.1(@types/node@25.2.2)':
     dependencies:
       '@inquirer/ansi': 2.0.3
       '@inquirer/figures': 2.0.3
-      '@inquirer/type': 4.0.3(@types/node@25.2.1)
+      '@inquirer/type': 4.0.3(@types/node@25.2.2)
       cli-width: 4.1.0
       mute-stream: 3.0.0
       signal-exit: 4.1.0
       wrap-ansi: 9.0.2
     optionalDependencies:
-      '@types/node': 25.2.1
+      '@types/node': 25.2.2
 
-  '@inquirer/editor@5.0.4(@types/node@25.2.1)':
+  '@inquirer/editor@5.0.4(@types/node@25.2.2)':
     dependencies:
-      '@inquirer/core': 11.1.1(@types/node@25.2.1)
-      '@inquirer/external-editor': 2.0.3(@types/node@25.2.1)
-      '@inquirer/type': 4.0.3(@types/node@25.2.1)
+      '@inquirer/core': 11.1.1(@types/node@25.2.2)
+      '@inquirer/external-editor': 2.0.3(@types/node@25.2.2)
+      '@inquirer/type': 4.0.3(@types/node@25.2.2)
     optionalDependencies:
-      '@types/node': 25.2.1
+      '@types/node': 25.2.2
 
-  '@inquirer/expand@5.0.4(@types/node@25.2.1)':
+  '@inquirer/expand@5.0.4(@types/node@25.2.2)':
     dependencies:
-      '@inquirer/core': 11.1.1(@types/node@25.2.1)
-      '@inquirer/type': 4.0.3(@types/node@25.2.1)
+      '@inquirer/core': 11.1.1(@types/node@25.2.2)
+      '@inquirer/type': 4.0.3(@types/node@25.2.2)
     optionalDependencies:
-      '@types/node': 25.2.1
+      '@types/node': 25.2.2
 
-  '@inquirer/external-editor@1.0.3(@types/node@25.2.1)':
-    dependencies:
-      chardet: 2.1.1
-      iconv-lite: 0.7.2
-    optionalDependencies:
-      '@types/node': 25.2.1
-
-  '@inquirer/external-editor@2.0.3(@types/node@25.2.1)':
+  '@inquirer/external-editor@1.0.3(@types/node@25.2.2)':
     dependencies:
       chardet: 2.1.1
       iconv-lite: 0.7.2
     optionalDependencies:
-      '@types/node': 25.2.1
+      '@types/node': 25.2.2
+
+  '@inquirer/external-editor@2.0.3(@types/node@25.2.2)':
+    dependencies:
+      chardet: 2.1.1
+      iconv-lite: 0.7.2
+    optionalDependencies:
+      '@types/node': 25.2.2
 
   '@inquirer/figures@2.0.3': {}
 
-  '@inquirer/input@5.0.4(@types/node@25.2.1)':
+  '@inquirer/input@5.0.4(@types/node@25.2.2)':
     dependencies:
-      '@inquirer/core': 11.1.1(@types/node@25.2.1)
-      '@inquirer/type': 4.0.3(@types/node@25.2.1)
+      '@inquirer/core': 11.1.1(@types/node@25.2.2)
+      '@inquirer/type': 4.0.3(@types/node@25.2.2)
     optionalDependencies:
-      '@types/node': 25.2.1
+      '@types/node': 25.2.2
 
-  '@inquirer/number@4.0.4(@types/node@25.2.1)':
+  '@inquirer/number@4.0.4(@types/node@25.2.2)':
     dependencies:
-      '@inquirer/core': 11.1.1(@types/node@25.2.1)
-      '@inquirer/type': 4.0.3(@types/node@25.2.1)
+      '@inquirer/core': 11.1.1(@types/node@25.2.2)
+      '@inquirer/type': 4.0.3(@types/node@25.2.2)
     optionalDependencies:
-      '@types/node': 25.2.1
+      '@types/node': 25.2.2
 
-  '@inquirer/password@5.0.4(@types/node@25.2.1)':
-    dependencies:
-      '@inquirer/ansi': 2.0.3
-      '@inquirer/core': 11.1.1(@types/node@25.2.1)
-      '@inquirer/type': 4.0.3(@types/node@25.2.1)
-    optionalDependencies:
-      '@types/node': 25.2.1
-
-  '@inquirer/prompts@8.2.0(@types/node@25.2.1)':
-    dependencies:
-      '@inquirer/checkbox': 5.0.4(@types/node@25.2.1)
-      '@inquirer/confirm': 6.0.4(@types/node@25.2.1)
-      '@inquirer/editor': 5.0.4(@types/node@25.2.1)
-      '@inquirer/expand': 5.0.4(@types/node@25.2.1)
-      '@inquirer/input': 5.0.4(@types/node@25.2.1)
-      '@inquirer/number': 4.0.4(@types/node@25.2.1)
-      '@inquirer/password': 5.0.4(@types/node@25.2.1)
-      '@inquirer/rawlist': 5.2.0(@types/node@25.2.1)
-      '@inquirer/search': 4.1.0(@types/node@25.2.1)
-      '@inquirer/select': 5.0.4(@types/node@25.2.1)
-    optionalDependencies:
-      '@types/node': 25.2.1
-
-  '@inquirer/rawlist@5.2.0(@types/node@25.2.1)':
-    dependencies:
-      '@inquirer/core': 11.1.1(@types/node@25.2.1)
-      '@inquirer/type': 4.0.3(@types/node@25.2.1)
-    optionalDependencies:
-      '@types/node': 25.2.1
-
-  '@inquirer/search@4.1.0(@types/node@25.2.1)':
-    dependencies:
-      '@inquirer/core': 11.1.1(@types/node@25.2.1)
-      '@inquirer/figures': 2.0.3
-      '@inquirer/type': 4.0.3(@types/node@25.2.1)
-    optionalDependencies:
-      '@types/node': 25.2.1
-
-  '@inquirer/select@5.0.4(@types/node@25.2.1)':
+  '@inquirer/password@5.0.4(@types/node@25.2.2)':
     dependencies:
       '@inquirer/ansi': 2.0.3
-      '@inquirer/core': 11.1.1(@types/node@25.2.1)
-      '@inquirer/figures': 2.0.3
-      '@inquirer/type': 4.0.3(@types/node@25.2.1)
+      '@inquirer/core': 11.1.1(@types/node@25.2.2)
+      '@inquirer/type': 4.0.3(@types/node@25.2.2)
     optionalDependencies:
-      '@types/node': 25.2.1
+      '@types/node': 25.2.2
 
-  '@inquirer/type@4.0.3(@types/node@25.2.1)':
+  '@inquirer/prompts@8.2.0(@types/node@25.2.2)':
+    dependencies:
+      '@inquirer/checkbox': 5.0.4(@types/node@25.2.2)
+      '@inquirer/confirm': 6.0.4(@types/node@25.2.2)
+      '@inquirer/editor': 5.0.4(@types/node@25.2.2)
+      '@inquirer/expand': 5.0.4(@types/node@25.2.2)
+      '@inquirer/input': 5.0.4(@types/node@25.2.2)
+      '@inquirer/number': 4.0.4(@types/node@25.2.2)
+      '@inquirer/password': 5.0.4(@types/node@25.2.2)
+      '@inquirer/rawlist': 5.2.0(@types/node@25.2.2)
+      '@inquirer/search': 4.1.0(@types/node@25.2.2)
+      '@inquirer/select': 5.0.4(@types/node@25.2.2)
     optionalDependencies:
-      '@types/node': 25.2.1
+      '@types/node': 25.2.2
+
+  '@inquirer/rawlist@5.2.0(@types/node@25.2.2)':
+    dependencies:
+      '@inquirer/core': 11.1.1(@types/node@25.2.2)
+      '@inquirer/type': 4.0.3(@types/node@25.2.2)
+    optionalDependencies:
+      '@types/node': 25.2.2
+
+  '@inquirer/search@4.1.0(@types/node@25.2.2)':
+    dependencies:
+      '@inquirer/core': 11.1.1(@types/node@25.2.2)
+      '@inquirer/figures': 2.0.3
+      '@inquirer/type': 4.0.3(@types/node@25.2.2)
+    optionalDependencies:
+      '@types/node': 25.2.2
+
+  '@inquirer/select@5.0.4(@types/node@25.2.2)':
+    dependencies:
+      '@inquirer/ansi': 2.0.3
+      '@inquirer/core': 11.1.1(@types/node@25.2.2)
+      '@inquirer/figures': 2.0.3
+      '@inquirer/type': 4.0.3(@types/node@25.2.2)
+    optionalDependencies:
+      '@types/node': 25.2.2
+
+  '@inquirer/type@4.0.3(@types/node@25.2.2)':
+    optionalDependencies:
+      '@types/node': 25.2.2
 
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:
@@ -3082,7 +3169,7 @@ snapshots:
 
   '@types/http-proxy@1.17.17':
     dependencies:
-      '@types/node': 25.2.1
+      '@types/node': 25.2.2
 
   '@types/inquirer@9.0.9':
     dependencies:
@@ -3091,7 +3178,7 @@ snapshots:
 
   '@types/node@12.20.55': {}
 
-  '@types/node@25.2.1':
+  '@types/node@25.2.2':
     dependencies:
       undici-types: 7.16.0
 
@@ -3110,9 +3197,9 @@ snapshots:
 
   '@types/through@0.0.33':
     dependencies:
-      '@types/node': 25.2.1
+      '@types/node': 25.2.2
 
-  '@vitejs/plugin-react@5.1.3(vite@7.3.1(@types/node@25.2.1))':
+  '@vitejs/plugin-react@5.1.3(vite@7.3.1(@types/node@25.2.2))':
     dependencies:
       '@babel/core': 7.29.0
       '@babel/plugin-transform-react-jsx-self': 7.27.1(@babel/core@7.29.0)
@@ -3120,7 +3207,7 @@ snapshots:
       '@rolldown/pluginutils': 1.0.0-rc.2
       '@types/babel__core': 7.20.5
       react-refresh: 0.18.0
-      vite: 7.3.1(@types/node@25.2.1)
+      vite: 7.3.1(@types/node@25.2.2)
     transitivePeerDependencies:
       - supports-color
 
@@ -3443,17 +3530,17 @@ snapshots:
 
   ini@1.3.8: {}
 
-  inquirer@13.2.2(@types/node@25.2.1):
+  inquirer@13.2.2(@types/node@25.2.2):
     dependencies:
       '@inquirer/ansi': 2.0.3
-      '@inquirer/core': 11.1.1(@types/node@25.2.1)
-      '@inquirer/prompts': 8.2.0(@types/node@25.2.1)
-      '@inquirer/type': 4.0.3(@types/node@25.2.1)
+      '@inquirer/core': 11.1.1(@types/node@25.2.2)
+      '@inquirer/prompts': 8.2.0(@types/node@25.2.2)
+      '@inquirer/type': 4.0.3(@types/node@25.2.2)
       mute-stream: 3.0.0
       run-async: 4.0.6
       rxjs: 7.8.2
     optionalDependencies:
-      '@types/node': 25.2.1
+      '@types/node': 25.2.2
 
   is-docker@3.0.0: {}
 
@@ -3780,16 +3867,16 @@ snapshots:
   read-package-up@12.0.0:
     dependencies:
       find-up-simple: 1.0.1
-      read-pkg: 10.0.0
-      type-fest: 5.4.3
+      read-pkg: 10.1.0
+      type-fest: 5.4.4
 
-  read-pkg@10.0.0:
+  read-pkg@10.1.0:
     dependencies:
       '@types/normalize-package-data': 2.4.4
       normalize-package-data: 8.0.0
       parse-json: 8.3.0
-      type-fest: 5.4.3
-      unicorn-magic: 0.3.0
+      type-fest: 5.4.4
+      unicorn-magic: 0.4.0
 
   read-yaml-file@1.1.0:
     dependencies:
@@ -3992,7 +4079,7 @@ snapshots:
 
   type-fest@4.41.0: {}
 
-  type-fest@5.4.3:
+  type-fest@5.4.4:
     dependencies:
       tagged-tag: 1.0.0
 
@@ -4001,6 +4088,8 @@ snapshots:
   undici-types@7.16.0: {}
 
   unicorn-magic@0.3.0: {}
+
+  unicorn-magic@0.4.0: {}
 
   universalify@0.1.2: {}
 
@@ -4021,17 +4110,17 @@ snapshots:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
 
-  vite-tsconfig-paths@6.0.5(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.1)):
+  vite-tsconfig-paths@6.1.0(typescript@5.9.3)(vite@7.3.1(@types/node@25.2.2)):
     dependencies:
       debug: 4.4.3
       globrex: 0.1.2
       tsconfck: 3.1.6(typescript@5.9.3)
-      vite: 7.3.1(@types/node@25.2.1)
+      vite: 7.3.1(@types/node@25.2.2)
     transitivePeerDependencies:
       - supports-color
       - typescript
 
-  vite@7.3.1(@types/node@25.2.1):
+  vite@7.3.1(@types/node@25.2.2):
     dependencies:
       esbuild: 0.27.3
       fdir: 6.5.0(picomatch@4.0.3)
@@ -4040,7 +4129,7 @@ snapshots:
       rollup: 4.57.1
       tinyglobby: 0.2.15
     optionalDependencies:
-      '@types/node': 25.2.1
+      '@types/node': 25.2.2
       fsevents: 2.3.3
 
   webidl-conversions@3.0.1: {}
