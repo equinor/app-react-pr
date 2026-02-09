@@ -12,10 +12,10 @@ permissions:
 on:
   pull_request:
     types:
-      - ready_for_review
-      - opened
-      - reopened
-      - synchronize
+      - ready_for_review  # When a draft PR is marked ready for review
+      - opened           # When a new PR is created
+      - reopened         # When a closed PR is reopened
+      - synchronize      # When new commits are pushed to the PR
   workflow_call:
 
 concurrency:
