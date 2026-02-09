@@ -1,5 +1,13 @@
 # app-react-pr
 
+## 0.0.4
+
+### Patch Changes
+
+- ec013e9: publish test
+- 01feb45: 2000
+- 4074083: test
+
 ## 0.0.3
 
 ### Patch Changes
