@@ -56,7 +56,7 @@ jobs:
 
       - name: Workflow Summary
         run: |
-          if [ ${{ inputs.release == "false" }} ]; then
+          if [[ "${{ inputs.release }}" != "true" ]]; then
             echo "## 🚀 PR Deployment Published" >> $GITHUB_STEP_SUMMARY
             echo "The application has been published to the CI environment. It will be tagged as pr-${{ github.event.number }} in Fusion." >> $GITHUB_STEP_SUMMARY
             echo "View application [here](https://fusion.ci.fusion-dev.net/apps/${{ inputs.app-name }}?$tag=pr-${{ github.event.number }})" >> $GITHUB_STEP_SUMMARY
