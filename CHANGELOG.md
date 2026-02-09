@@ -1,5 +1,11 @@
 # app-react-pr
 
+## 0.0.7
+
+### Patch Changes
+
+- dd40938: token test
+
 ## 0.0.6
 
 ### Patch Changes
