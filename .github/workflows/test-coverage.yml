@@ -5,7 +5,6 @@ on:
     workflows: ["🤖 Test", "🧪 Test Validation"]           # exact name of Workflow A
     types:
       - completed
-    branches: [main]
   workflow_call:
     inputs:
       NODE_VERSION:
