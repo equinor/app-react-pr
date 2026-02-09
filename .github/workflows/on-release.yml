@@ -9,8 +9,8 @@ jobs:
   extract-package:
     runs-on: ubuntu-latest
     outputs:
-        appName: ${{ steps.extract.outputs.appName }}
-        appPath: ${{ steps.extract.outputs.appPath }}
+        appName: ${{ steps.extract.outputs.app-name }}
+        appPath: ${{ steps.extract.outputs.app-path }}
     steps:
       - uses: actions/checkout@v6
         with:
@@ -18,14 +18,7 @@ jobs:
       
       - name: Extract package name and path
         id: extract
-        run: |
-              echo "Extracting package name and path from tag: ${{ github.ref }}"
-              PACKAGE_NAME=$(echo ${{ github.ref }} | cut -d'@' -f1 | sed 's|refs/tags/||')
-              PACKAGE_VERSION=$(echo ${{ github.ref }} | cut -d'@' -f2)
-              PATH_TO_PACKAGE=$(find . -type f -name "package.json" -exec grep -l "\"name\": \"${PACKAGE_NAME}\"" {} + | head -n 1 | xargs dirname)
-               
-              echo "appName=$PACKAGE_NAME" >> $GITHUB_OUTPUT
-              echo "appPath=$PATH_TO_PACKAGE" >> $GITHUB_OUTPUT
+        uses: ./.github/workflows/actions/extract-package-info
         
 
   build:
