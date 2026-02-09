@@ -25,7 +25,6 @@ jobs:
   pr-detection:
     name: 🕵️‍♂️ PR Draft Detection 
     runs-on: ubuntu-latest
-    if: github.actor != 'dependabot[bot]' 
     permissions:
       contents: read
       pull-requests: read
@@ -56,7 +55,7 @@ jobs:
   build:
     name: 🛠️ App Resolver Workflow
     needs: pr-detection
-    if: needs.pr-detection.outputs.is-draft == 'false'
+    if: needs.pr-detection.outputs.is-draft == 'false' && github.actor != 'dependabot[bot]' 
     permissions:
       contents: read
       id-token: write
