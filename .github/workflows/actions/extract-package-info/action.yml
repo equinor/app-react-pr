@@ -47,16 +47,20 @@ runs:
           echo "working-directory=$WORKING_DIR" >> $GITHUB_OUTPUT
           echo "project-structure=$PROJECT_STRUCTURE" >> $GITHUB_OUTPUT
           echo "Project structure: Monorepo (apps/${{ inputs.package-name }})"
-        elif [ -f "package.json" ] && [ -f "app.manifest.ts" ]; then
+        elif [ -f "package.json" ]; then
           WORKING_DIR="."
           PROJECT_STRUCTURE="single-package"
           echo "working-directory=$WORKING_DIR" >> $GITHUB_OUTPUT
           echo "project-structure=$PROJECT_STRUCTURE" >> $GITHUB_OUTPUT
-          echo "Project structure: Single package (root directory)"
+          if [ -f "app.manifest.ts" ]; then
+            echo "Project structure: Single package (root directory) - Fusion app detected"
+          else
+            echo "Project structure: Single package (root directory) - Generic package"
+          fi
         else
           echo "Error: Could not detect project structure"
           echo "- For monorepo: Provide package-name input and ensure apps/\$package-name directory exists"
-          echo "- For single package: Ensure package.json and app.manifest.ts exist in root"
+          echo "- For single package: Ensure package.json exists in root directory"
           exit 1
         fi
         
