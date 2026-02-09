@@ -1,5 +1,11 @@
 # app-react-pr
 
+## 0.0.6
+
+### Patch Changes
+
+- 31beee0: aa
+
 ## 0.0.5
 
 ### Patch Changes
