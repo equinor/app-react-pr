@@ -34,5 +34,6 @@ jobs:
         app-name: ${{ needs.extract-package.outputs.appName }}
         work-dir: ${{ needs.extract-package.outputs.appPath }}
         env-matrix: '["ci"]' # if needed add additinal environments '["ci", "fqa", "fprd", "tr"]'
+        release: true # this will ensure that the app is packed with the version from package.json and not as a snapshot
 
 
