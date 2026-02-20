@@ -1,0 +1,46 @@
+name: PR Deployment - Simple
+
+on:
+  pull_request:
+    types: [opened, reopened, labeled, synchronize]
+
+concurrency:
+  group: pr-app-react-pr-${{ github.event.pull_request.id }}
+  cancel-in-progress: true
+
+permissions:
+  id-token: write
+  contents: read
+  pull-requests: write
+
+
+jobs:
+  build-pack:
+    name: 🛠️ PR pipeline for App-React-PR
+    runs-on: ubuntu-latest
+    env:
+      app-name: app-react-pr
+      work-dir: .
+    environment: pr
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      # Install dependencies and setup Node.js environment
+      - name: Setup node and install deps
+        uses: ./.github/workflows/actions/node-setup
+
+      - name: Pack application PR deployment
+        working-directory: ${{ env.work-dir }}
+        run: pnpm ffc app pack --snapshot pr
+
+
+      - name: Publish PR Application ${{ env.app-name }} pr-${{ github.event.number }}
+        uses: equinor/fusion-action-app-publish@v1
+        with:
+          artifact: ./app-bundle.zip
+          prNR: ${{ github.event.number }}          
+          working-directory: ${{ env.work-dir }}
+          azure-client-id: ${{ vars.AZURE_SP_FUSION }}
+          azure-tenant-id: ${{ vars.AZURE_TENANT_ID }}
