@@ -21,7 +21,7 @@ jobs:
     env:
       app-name: app-react-pr
       work-dir: .
-    environment: CI
+    environment: pr
     steps:
 
       - name: Checkout
@@ -42,5 +42,5 @@ jobs:
           artifact: ./app-bundle.zip
           prNR: ${{ github.event.number }}          
           working-directory: ${{ env.work-dir }}
-          azure-client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          azure-tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          azure-client-id: ${{ vars.AZURE_SP_FUSION }}
+          azure-tenant-id: ${{ vars.AZURE_TENANT_ID }}
